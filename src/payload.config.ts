@@ -61,7 +61,7 @@ export default buildConfig({
   editor: defaultLexical,
   db: vercelPostgresAdapter({
     pool: {
-      connectionString: process.env.POSTGRES_URL || '',
+      connectionString: process.env.NEON_DATABASE_URL || '',
     },
   }),
   collections: [Pages, Posts, Media, Categories, Users],
@@ -73,7 +73,7 @@ export default buildConfig({
       collections: {
         media: true,
       },
-      token: process.env.BLOB_READ_WRITE_TOKEN || '',
+      token: process.env.PAYLOAD_BLOB_READ_WRITE_TOKEN || '',
     }),
   ],
   secret: process.env.PAYLOAD_SECRET,
