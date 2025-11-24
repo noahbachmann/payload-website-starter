@@ -48,40 +48,40 @@ export const AdminBar: React.FC<{
 
   return (
     <div
-      className={cn(baseClass, 'py-2 bg-black text-white', {
+      className={ cn(baseClass, 'py-2 bg-black text-white', {
         block: show,
         hidden: !show,
-      })}
+      }) }
     >
       <div className="container">
         <PayloadAdminBar
-          {...adminBarProps}
+          { ...adminBarProps }
           className="py-2 text-white"
-          classNames={{
+          classNames={ {
             controls: 'font-medium text-white',
             logo: 'text-white',
             user: 'text-white',
-          }}
-          cmsURL={getClientSideURL()}
-          collectionSlug={collection}
-          collectionLabels={{
+          } }
+          cmsURL={ getClientSideURL() }
+          collectionSlug={ collection }
+          collectionLabels={ {
             plural: collectionLabels[collection]?.plural || 'Pages',
             singular: collectionLabels[collection]?.singular || 'Page',
-          }}
-          logo={<Title />}
-          onAuthChange={onAuthChange}
-          onPreviewExit={() => {
+          } }
+          logo={ <Title /> }
+          onAuthChange={ onAuthChange }
+          onPreviewExit={ () => {
             fetch('/next/exit-preview').then(() => {
               router.push('/')
               router.refresh()
             })
-          }}
-          style={{
+          } }
+          style={ {
             backgroundColor: 'transparent',
             padding: 0,
             position: 'relative',
             zIndex: 'unset',
-          }}
+          } }
         />
       </div>
     </div>
