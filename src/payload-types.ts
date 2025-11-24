@@ -809,7 +809,6 @@ export interface Form {
  */
 export interface Customer {
   id: number;
-  name?: string | null;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -1422,7 +1421,6 @@ export interface UsersSelect<T extends boolean = true> {
  * via the `definition` "customers_select".
  */
 export interface CustomersSelect<T extends boolean = true> {
-  name?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;
