@@ -10,14 +10,14 @@ export const MediumImpactHero: React.FC<Page['hero']> = ({ links, media, richTex
   return (
     <div className="">
       <div className="container mb-8">
-        {richText && <RichText className="mb-6" data={richText} enableGutter={false} />}
+        {richText && <RichText className="mb-6" data={ richText } enableGutter={ false } />}
 
         {Array.isArray(links) && links.length > 0 && (
           <ul className="flex gap-4">
             {links.map(({ link }, i) => {
               return (
-                <li key={i}>
-                  <CMSLink {...link} />
+                <li key={ i }>
+                  <CMSLink { ...link } />
                 </li>
               )
             })}
@@ -31,11 +31,11 @@ export const MediumImpactHero: React.FC<Page['hero']> = ({ links, media, richTex
               className="-mx-4 md:-mx-8 2xl:-mx-16"
               imgClassName=""
               priority
-              resource={media}
+              resource={ media }
             />
             {media?.caption && (
               <div className="mt-3">
-                <RichText data={media.caption} enableGutter={false} />
+                <RichText data={ media.caption } enableGutter={ false } />
               </div>
             )}
           </div>

@@ -45,17 +45,17 @@ export default async function Page({ params: paramsPromise }: Args) {
       <div className="container mb-8">
         <PageRange
           collection="posts"
-          currentPage={posts.page}
-          limit={12}
-          totalDocs={posts.totalDocs}
+          currentPage={ posts.page }
+          limit={ 12 }
+          totalDocs={ posts.totalDocs }
         />
       </div>
 
-      <CollectionArchive posts={posts.docs} />
+      <CollectionArchive posts={ posts.docs } />
 
       <div className="container">
         {posts?.page && posts?.totalPages > 1 && (
-          <Pagination page={posts.page} totalPages={posts.totalPages} />
+          <Pagination page={ posts.page } totalPages={ posts.totalPages } />
         )}
       </div>
     </div>

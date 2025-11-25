@@ -28,7 +28,7 @@ export const PostHero: React.FC<{
                 const isLast = index === categories.length - 1
 
                 return (
-                  <React.Fragment key={index}>
+                  <React.Fragment key={ index }>
                     {titleToUse}
                     {!isLast && <React.Fragment>, &nbsp;</React.Fragment>}
                   </React.Fragment>
@@ -56,7 +56,7 @@ export const PostHero: React.FC<{
               <div className="flex flex-col gap-1">
                 <p className="text-sm">Date Published</p>
 
-                <time dateTime={publishedAt}>{formatDateTime(publishedAt)}</time>
+                <time dateTime={ publishedAt }>{formatDateTime(publishedAt)}</time>
               </div>
             )}
           </div>
@@ -64,7 +64,7 @@ export const PostHero: React.FC<{
       </div>
       <div className="min-h-[80vh] select-none">
         {heroImage && typeof heroImage !== 'string' && (
-          <Media fill priority imgClassName="-z-10 object-cover" resource={heroImage} />
+          <Media fill priority imgClassName="-z-10 object-cover" resource={ heroImage } />
         )}
         <div className="absolute pointer-events-none left-0 bottom-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent" />
       </div>

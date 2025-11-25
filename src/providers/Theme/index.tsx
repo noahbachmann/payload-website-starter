@@ -51,7 +51,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     setThemeState(themeToSet)
   }, [])
 
-  return <ThemeContext value={{ setTheme, theme }}>{children}</ThemeContext>
+  return <ThemeContext value={ { setTheme, theme } }>{children}</ThemeContext>
 }
 
 export const useTheme = (): ThemeContextType => use(ThemeContext)
