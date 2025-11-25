@@ -6,6 +6,9 @@ export const Customers: CollectionConfig = {
 		defaultColumns: ['email'],
 		useAsTitle: 'email',
 	},
+	access: {
+		create: () => true,
+	},
 	auth: true,
 	fields: [
 	],
